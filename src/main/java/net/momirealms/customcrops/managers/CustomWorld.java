@@ -135,14 +135,14 @@ public class CustomWorld {
         File file = new File(CustomCrops.plugin.getDataFolder().getParentFile().getParentFile(), MainConfig.worldFolder + world.getName() + File.separator + "customcrops_data");
         File[] files = file.listFiles();
         if (files == null) return;
-        try {
+        //try {
             for (File data : files) {
                 FileUtils.copyFileToDirectory(data, new File(CustomCrops.plugin.getDataFolder(), "backup" + File.separator + world.getName() + "_" + format.format(date)));
             }
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+        //}
+        //catch (IOException e) {
+        //    e.printStackTrace();
+        //}
     }
 
     public void loadScarecrow() {
